@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<compounds>
+<orgCompound id="1">
+	<compound id="conju1">
+		<basevalue>214</basevalue>
+		<substituent>10</substituent>
+		<doubleBond>0</doubleBond>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>224</lambdaMax>
+	</compound>
+	<compound id="conju2">
+		<basevalue>214</basevalue>
+		<substituent>30</substituent>
+		<doubleBond>0</doubleBond>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>244</lambdaMax>
+	</compound>
+	<compound id="conju3">
+		<basevalue>214</basevalue>
+		<substituent>15</substituent>
+		<doubleBond>0</doubleBond>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>234</lambdaMax>
+	</compound>
+	<compound id="conju4">
+		<basevalue>253</basevalue>
+		<substituent>15</substituent>
+		<doubleBond>0</doubleBond>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>273</lambdaMax>
+	</compound>
+	<compound id="conju5">
+		<basevalue>214</basevalue>
+		<substituent>10</substituent>
+		<doubleBond>0</doubleBond>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>229</lambdaMax>
+	</compound>
+	<compound id="conju6">
+		<basevalue>214</basevalue>
+		<substituent>5</substituent>
+		<doubleBond>0</doubleBond>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>219</lambdaMax>
+	</compound>
+	<compound id="conju7">
+		<basevalue>253</basevalue>
+		<substituent>25</substituent>
+		<doubleBond>60</doubleBond>
+		<exocyclicdoubleBond>15</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>353</lambdaMax>
+	</compound>
+	<compound id="conju8">
+		<basevalue>253</basevalue>
+		<substituent>15</substituent>
+		<doubleBond>30</doubleBond>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>303</lambdaMax>
+	</compound>
+	<compound id="conju9">
+		<basevalue>214</basevalue>
+		<substituent>15</substituent>
+		<doubleBond>0</doubleBond>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>
+		<polarGroups>5</polarGroups>
+		<lambdaMax>239</lambdaMax>
+	</compound>
+	<compound id="conju10">
+		<basevalue>253</basevalue>
+		<substituent>20</substituent>
+		<doubleBond>30</doubleBond>
+		<exocyclicdoubleBond>10</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>313</lambdaMax>
+	</compound>
+	<compound id="conju11">
+		<basevalue>214</basevalue>
+		<substituent>25</substituent>
+		<doubleBond>30</doubleBond>
+		<exocyclicdoubleBond>15</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>284</lambdaMax>
+	</compound>
+	<compound id="conju12">
+		<basevalue>253</basevalue>
+		<substituent>40</substituent>
+		<doubleBond>30</doubleBond>
+		<exocyclicdoubleBond>15</exocyclicdoubleBond>
+		<polarGroups>0</polarGroups>
+		<lambdaMax>338</lambdaMax>
+	</compound>
+</orgCompound>
+
+<orgCompound id="2">
+<compound id="keto1">
+		<basevalue>214</basevalue>
+		<ring_alpha>10</ring_alpha>
+		<ring_beta>24</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>		
+		<lambdaMax>248</lambdaMax>
+	</compound>
+	<compound id="keto2">
+		<basevalue>214</basevalue>
+		<ring_alpha>0</ring_alpha>
+		<ring_beta>12</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>18</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>30</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>		
+		<lambdaMax>279</lambdaMax>
+	</compound>
+	<compound id="keto3">
+		<basevalue>215</basevalue>
+		<ring_alpha>0</ring_alpha>
+		<ring_beta>24</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>		
+		<lambdaMax>244</lambdaMax>
+	</compound>
+	<compound id="keto4">
+		<basevalue>215</basevalue>
+		<ring_alpha>10</ring_alpha>
+		<ring_beta>12</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>		
+		<lambdaMax>237</lambdaMax>
+	</compound>
+		
+	<compound id="keto5">
+		<basevalue>215</basevalue>
+		<ring_alpha>10</ring_alpha>
+		<ring_beta>24</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>10</exocyclicdoubleBond>		
+		<lambdaMax>259</lambdaMax>
+	</compound>
+	<compound id="keto6">
+		<basevalue>215</basevalue>
+		<ring_alpha>0</ring_alpha>
+		<ring_beta>12</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>18</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>		
+		<lambdaMax>280</lambdaMax>
+	</compound>
+	<compound id="keto7">
+		<basevalue>215</basevalue>
+		<ring_alpha>10</ring_alpha>
+		<ring_beta>0</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>18</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>30</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>		
+		<lambdaMax>317</lambdaMax>
+	</compound>
+	<compound id="keto8">
+		<basevalue>215</basevalue>
+		<ring_alpha>0</ring_alpha>
+		<ring_beta>12</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>		
+		<lambdaMax>227</lambdaMax>
+	</compound>
+	<compound id="keto9">
+		<basevalue>215</basevalue>
+		<ring_alpha>10</ring_alpha>
+		<ring_beta>24</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>5</exocyclicdoubleBond>		
+		<lambdaMax>317</lambdaMax>
+	</compound>
+	<compound id="keto10">
+		<basevalue>202</basevalue>
+		<ring_alpha>0</ring_alpha>
+		<ring_beta>12</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>		
+		<lambdaMax>214</lambdaMax>
+	</compound>
+	<compound id="keto11">
+		<basevalue>202</basevalue>
+		<ring_alpha>0</ring_alpha>
+		<ring_beta>12</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>35</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>		
+		<lambdaMax>249</lambdaMax>
+	</compound>
+	<compound id="keto12">
+		<basevalue>215</basevalue>
+		<ring_alpha>10</ring_alpha>
+		<ring_beta>12</ring_beta>
+		<ring_gamma>0</ring_gamma>
+		<ring_delta>0</ring_delta>
+		<polar_alpha>0</polar_alpha>
+		<polar_beta>0</polar_beta>
+		<polar_gamma>0</polar_gamma>
+		<polar_delta>0</polar_delta>		
+		<doubleBond>0</doubleBond>
+		<homodieneComp>0</homodieneComp>
+		<exocyclicdoubleBond>0</exocyclicdoubleBond>		
+		<lambdaMax>237</lambdaMax>
+	</compound>
+</orgCompound>
+<orgCompound id="3">
+<compound id="aromatic1">
+		<basevalue>246</basevalue>
+		<ring_ortho>3</ring_ortho>
+		<ring_para>0</ring_para>
+		<ring_meta>0</ring_meta>		
+		<polar_ortho>0</polar_ortho>
+		<polar_para>25</polar_para>
+		<polar_meta>0</polar_meta>				
+		<lambdaMax>274</lambdaMax>
+	</compound>
+	<compound id="aromatic2">
+		<basevalue>246</basevalue>
+		<ring_ortho>3</ring_ortho>
+		<ring_para>0</ring_para>
+		<ring_meta>0</ring_meta>		
+		<polar_ortho>7</polar_ortho>
+		<polar_para>0</polar_para>
+		<polar_meta>0</polar_meta>				
+		<lambdaMax>256</lambdaMax>
+	</compound>
+		<compound id="aromatic3">
+		<basevalue>246</basevalue>
+		<ring_ortho>3</ring_ortho>
+		<ring_para>0</ring_para>
+		<ring_meta>0</ring_meta>		
+		<polar_ortho>0</polar_ortho>
+		<polar_para>25</polar_para>
+		<polar_meta>7</polar_meta>				
+		<lambdaMax>281</lambdaMax>
+	</compound>
+		<compound id="aromatic4">
+		<basevalue>250</basevalue>
+		<ring_ortho>0</ring_ortho>
+		<ring_para>0</ring_para>
+		<ring_meta>0</ring_meta>		
+		<polar_ortho>7</polar_ortho>
+		<polar_para>0</polar_para>
+		<polar_meta>0</polar_meta>				
+		<lambdaMax>257</lambdaMax>
+	</compound>
+		<compound id="aromatic5">
+		<basevalue>250</basevalue>
+		<ring_ortho>0</ring_ortho>
+		<ring_para>0</ring_para>
+		<ring_meta>0</ring_meta>		
+		<polar_ortho>0</polar_ortho>
+		<polar_para>25</polar_para>
+		<polar_meta>0</polar_meta>				
+		<lambdaMax>275</lambdaMax>
+	</compound>
+		<compound id="aromatic6">
+		<basevalue>246</basevalue>
+		<ring_ortho>3</ring_ortho>
+		<ring_para>0</ring_para>
+		<ring_meta>0</ring_meta>		
+		<polar_ortho>0</polar_ortho>
+		<polar_para>15</polar_para>
+		<polar_meta>3</polar_meta>				
+		<lambdaMax>267</lambdaMax>
+	</compound>
+		<compound id="aromatic7">
+		<basevalue>246</basevalue>
+		<ring_ortho>3</ring_ortho>
+		<ring_para>0</ring_para>
+		<ring_meta>0</ring_meta>		
+		<polar_ortho>0</polar_ortho>
+		<polar_para>0</polar_para>
+		<polar_meta>2</polar_meta>				
+		<lambdaMax>251</lambdaMax>
+	</compound>	
+	</orgCompound>
+</compounds>
