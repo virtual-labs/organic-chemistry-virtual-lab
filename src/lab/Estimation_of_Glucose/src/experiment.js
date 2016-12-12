@@ -1,13 +1,14 @@
 /** Event handling functions starts here */
 
 /** Function for starting the experiment */
-function startExperiment(scope, dialogs) {
+function startExperiment(scope) {
     if ( !start_flag ) {
         /** Denote experiment is started */
         start_flag = true;
         scope.start_exp = _("Stop");
-        scope.titrate_disable = true;
-        scope.dropdown_disable = true;
+        scope.titrant_disable = true; /** For enabling and disabling titrant dropdown */
+        scope.normality_disable = true; /** For enabling and disabling normality slider */ 
+        scope.volume_disable = true; /** For enabling and disabling volume slider */
         /** Interval for setting turner on */
         turner_timer = setInterval(function() {
             turner_count++;
@@ -16,9 +17,9 @@ function startExperiment(scope, dialogs) {
             }
             turnerRotate(scope, turner_count)
         }, 50);
-        getChild(glucose_estimation_stage, "drop1").y = 448;        
+        getChild(glucose_estimation_stage, "drop1").y = 418;        
         dropDown(); /** Calling function for moving the drop */       
-        startTitration(scope, dialogs); /** Calls calculate function with in an interval */
+        startTitration(scope); /** Calls calculate function with in an interval */
     } else {
         /** Clears the interval for calling calculateFn */
         clearInterval(start_counter);
@@ -27,29 +28,17 @@ function startExperiment(scope, dialogs) {
         scope.start_exp = _("Start");
     }
 }
-
-/** Function for making turner off and on */
-turner_rect.on("click", function() {
-    /** Making turner on */
-    if ( !turner_start_flag ) {
-        turner_start_flag = true;
-    } else { /** Making turner off */
-        turner_start_flag = false;
-    }
-    startExperiment(scope_temp);
-    scope_temp.$apply();
-}); 
-
+            
 /** Function for resetting the experiment */
 function resetFn(scope) {    
-    initialisationOfImages(scope);
-    initialisationOfVariables(scope);
-    initialisationOfControls(scope);
     turner_rect.mouseEnabled = true;
     scope.titration_soln = titrant_array[0]; 
     mask_flask_rect.y=506;
     mask_burette_rect.y=135;
     clearInterval(start_counter);
+    initialisationOfControls(scope);
+    initialisationOfVariables(scope);
+    initialisationOfImages(scope);
 }
 
 /** Function for selecting titrate */
@@ -66,12 +55,12 @@ function selectTitrantFn(scope) {
 }
 
 /** Function for changing the speed of the drop */
-function changeDropSpeedFn(scope,dialogs) {
+function changeDropSpeedFn(scope) {
     var _current_speed = scope.speed;
     delay_counter = dalay_max / _current_speed;
     drop_speed_var = scope.speed;
     if ( start_flag == true ) {
-        startTitration(scope, dialogs);
+        startTitration(scope);
     }
 }
 
@@ -90,6 +79,7 @@ function changeVolumeFn(scope) {
 /** Function for the click event of Methyle Blue button */
 function addMethyleneFn(scope) {
     scope.start_disable = false;
+    turner_rect.mouseEnabled = true;
     scope.methylene_disable = true;
     getChild(glucose_estimation_stage, "solution_without_methylene").visible = false;
     getChild(glucose_estimation_stage, "fehling_solution").visible = true;
@@ -98,7 +88,7 @@ function addMethyleneFn(scope) {
 /** Event handling functions ends here */
 
 /** Calclation function starts here */
-function calculateFn(scope, dialogs) {
+function calculateFn(scope) {
     /** Calculate the solution level in each interval */
     burette_sol = solution_vol + burette_soln_incr;
     flask_sol = solution_vol + flask_soln_incr;
@@ -113,9 +103,10 @@ function calculateFn(scope, dialogs) {
         mask_flask_rect.y -= flask_sol;
         mask_burette_rect.y += burette_sol;
         /** Calculate the volume of titrant Titrant Volume (V2) = N1*V1/N2 */
-        titrant_volume = ((scope.normality*scope.volume)/titrant_value_array[scope.titration_soln]).toFixed(1);
+        titrant_volume = ((scope.normality*scope.volume)/titrant_value_array[scope.titration_soln]);
+        var _temp_titrant_volume = ((scope.normality*scope.volume)/titrant_value_array[scope.titration_soln]).toFixed(1);
         /** Titrant volume when blue coloue just fades = End point - 0.3 */
-        end_point_val = titrant_volume - 0.3;
+        end_point_val = Number(titrant_volume - 0.3).toFixed(1);
         /** When titrant used reaches end_point_val a pale blue colour is observed due to the formation of glucose in the solution */
         if ( titrant_sol == end_point_val ) {
             getChild(glucose_estimation_stage, "solution_without_methylene").visible = true;
@@ -125,17 +116,19 @@ function calculateFn(scope, dialogs) {
             clearFn();            
             scope.start_exp = _("Start");
             scope.start_disable = true;
+            turner_rect.mouseEnabled = false;
             scope.methylene_disable = false;            
-            dialogs.error();
+            dialogs_temp.notify(_("Information"), _("Add Methylene Blue!"));
         }
         /** When titrant used reaches titrant_volume precipitate is observed due to the formation of glucose in the solution */
-        if ( titrant_sol == titrant_volume ) {
+        if ( titrant_sol == _temp_titrant_volume ) {
             getChild(glucose_estimation_stage, "fehling_solution").visible = false;
             getChild(glucose_estimation_stage, "colorless_solution").visible = true;
             getChild(glucose_estimation_stage, "red_sediment").visible = true;
         }
         if ( titrant_sol >= final_titration_point ) {
             scope.start_disable = true;
+            turner_rect.mouseEnabled = false;
             clearInterval(start_counter);
             clearFn(scope);
         }
@@ -186,17 +179,17 @@ function dropDown() {
             }, 600).call(dropUp);
         } else if ( drop_speed_var >= 0.4 && drop_speed_var <= 0.7 ) {
             var drop_tween = createjs.Tween.get(getChild(glucose_estimation_stage, "drop1")).to({
-                y: 475
+                y: 445
             }, 500);
             var drop_tween1 = createjs.Tween.get(getChild(glucose_estimation_stage, "drop2")).to({
                 y: drop_y
             }, 500).call(dropUp);
         } else if ( drop_speed_var >= 0.7 && drop_speed_var <= 1 ) {
             var drop_tween = createjs.Tween.get(getChild(glucose_estimation_stage, "drop1")).to({
-                y: 475
+                y: 445
             }, 500);
             var drop_tween1 = createjs.Tween.get(getChild(glucose_estimation_stage, "drop2")).to({
-                y: 500
+                y: 470
             }, 500);
             var drop_tween2 = createjs.Tween.get(getChild(glucose_estimation_stage, "drop3")).to({
                 y: drop_y
@@ -227,7 +220,7 @@ function dropUp() {
             getChild(glucose_estimation_stage, "drop2").y = 445;
             getChild(glucose_estimation_stage, "drop3").y = 470;
             getChild(glucose_estimation_stage, "drop2").alpha = 1;
-            if ( drop_y >= 505 ) {
+            if ( drop_y >= 470 ) {
                 getChild(glucose_estimation_stage, "drop3").alpha = 1;
             }
         }
@@ -244,10 +237,10 @@ function turnerRotate(scope, inr) {
 }
 
 /** Function for beginning the titration */
-function startTitration(scope, dialogs) {
+function startTitration(scope) {
     clearInterval(start_counter);
     start_counter = setInterval(function() {
-        calculateFn(scope, dialogs)
+        calculateFn(scope)
     }, delay_counter);
 }
 

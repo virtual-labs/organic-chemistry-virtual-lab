@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: d\n"
-"POT-Creation-Date: 2016-11-25 11:04+0530\n"
-"PO-Revision-Date: 2016-11-25 11:15+0530\n"
+"POT-Creation-Date: 2016-12-05 14:47+0530\n"
+"PO-Revision-Date: 2016-12-05 14:50+0530\n"
 "Last-Translator: \n"
 "Language-Team: d\n"
 "Language: hi\n"
@@ -19,9 +19,17 @@ msgstr ""
 msgid "Stop"
 msgstr "Stop"
 
-#: experiment.js:27 experiment.js:126 view.js:320
+#: experiment.js:27 experiment.js:127 view.js:331
 msgid "Start"
 msgstr "Start"
+
+#: experiment.js:130
+msgid "Information"
+msgstr "Information"
+
+#: experiment.js:130 user_controller.js:13
+msgid "Add Methylene Blue!"
+msgstr "Add Methylene Blue!"
 
 #: user_controller.js:13
 #, fuzzy
@@ -29,118 +37,125 @@ msgid "Error"
 msgstr "Error"
 
 #: user_controller.js:13
-msgid "Add Methylene Blue!"
-msgstr "Add Methylene Blue!"
-
-#: user_controller.js:13
 msgid "Okay"
 msgstr "Okay"
 
-#: view.js:193
+#: view.js:204
 msgid "help1"
 msgstr "Select titrant using 'Titrant' dropdown."
 
-#: view.js:193
+#: view.js:204
 msgid "help2"
 msgstr "Adjust speed of the titrant using 'Speed of drops' slider."
 
-#: view.js:193
+#: view.js:204
 msgid "help3"
-msgstr "Adjust the normality and volume using corresponding sliders."
+msgstr ""
+"Adjust the normality and volume of titrate using corresponding sliders."
 
-#: view.js:193
+#: view.js:204
 msgid "help4"
 msgstr "Click on 'START' button to start the experiment."
 
-#: view.js:193
+#: view.js:204
 msgid "help5"
-msgstr "Titrate until the solution become blue."
+msgstr "Titrate until the blue colour just fades."
 
-#: view.js:193
+#: view.js:204
 msgid "help6"
-msgstr "Observe the end point and add methylene using 'Methylene Blue' button."
+msgstr "Add methylene blue indicator using methylene blue button."
 
-#: view.js:193
+#: view.js:204
+msgid "help7"
+msgstr ""
+"Continue the titration using 'START' button till a red precipitate is "
+"obtained."
+
+#: view.js:204
+msgid "help8"
+msgstr "Observe the end point."
+
+#: view.js:204
 msgid "Next"
 msgstr "Next"
 
-#: view.js:193
+#: view.js:204
 msgid "Close"
 msgstr "Close"
 
-#: view.js:195
+#: view.js:206
 msgid "Organic Synthesis: Estimation Of Glucose"
 msgstr "Organic Synthesis: Estimation Of Glucose"
 
-#: view.js:196
+#: view.js:207
 msgid "Variables"
 msgstr "Variables"
 
-#: view.js:197
+#: view.js:208
 msgid "Titrant"
 msgstr "Titrant"
 
-#: view.js:198 view.js:215
+#: view.js:209 view.js:228
 msgid "Water Melon"
 msgstr "Water Melon"
 
-#: view.js:199
+#: view.js:210
 msgid "Speed of drops"
 msgstr "Speed of drops"
 
-#: view.js:200
+#: view.js:211
 msgid "Titrate"
 msgstr "Titrate"
 
-#: view.js:201 view.js:225
+#: view.js:212
 msgid "Fehling's Solution"
 msgstr "Fehling's Solution"
 
-#: view.js:202
+#: view.js:213
 msgid "Indicator :"
 msgstr "Indicator :"
 
-#: view.js:203
+#: view.js:214
 msgid "Normality"
 msgstr "Normality"
 
-#: view.js:204
+#: view.js:216
 msgid "Volume"
 msgstr "Volume"
 
-#: view.js:205
-msgid "Volume of Water"
-msgstr "Volume of Water"
-
-#: view.js:207
-msgid "Methylene Blue"
-msgstr "Methylene Blue"
-
-#: view.js:208
-msgid "Reset"
-msgstr "Reset"
-
-#: view.js:209
-msgid "Result"
-msgstr "Result"
-
-#: view.js:210
-msgid "Titrant Used"
-msgstr "Titrant Used"
-
-#: view.js:211
+#: view.js:217 view.js:224
 msgid "ml"
 msgstr "ml"
 
-#: view.js:212
+#: view.js:218
+msgid "Volume of Water"
+msgstr "Volume of Water"
+
+#: view.js:220
+msgid "Methylene Blue"
+msgstr "Methylene Blue"
+
+#: view.js:221
+msgid "Reset"
+msgstr "Reset"
+
+#: view.js:222
+msgid "Result"
+msgstr "Result"
+
+#: view.js:223
+msgid "Titrant Used"
+msgstr "Titrant Used"
+
+#: view.js:225
 msgid "copyright"
 msgstr "Copyright © Amrita University 2009 - 2015"
 
-#: view.js:218
+#: view.js:231
 msgid "Tender Coconut"
 msgstr "Tender Coconut"
 
-#: view.js:221
+#: view.js:234
 msgid "Soft Drink"
 msgstr "Soft Drink"
 
@@ -198,15 +213,6 @@ msgstr "Soft Drink"
 
 #~ msgid "Castor oil"
 #~ msgstr "Castor oil"
-
-#~ msgid "help7"
-#~ msgstr ""
-#~ "When the volume of titrant reaches zero refill the burette by clicking "
-#~ "'REFILL BURETTE' button."
-
-#~ msgid "help8"
-#~ msgstr ""
-#~ "Continue the titration until the colour of the solution turns colourless."
 
 #~ msgid "help9"
 #~ msgstr "Observe the end point."

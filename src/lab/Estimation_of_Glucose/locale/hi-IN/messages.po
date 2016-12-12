@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: d\n"
-"POT-Creation-Date: 2016-11-25 11:05+0530\n"
-"PO-Revision-Date: 2016-11-25 12:06+0530\n"
+"POT-Creation-Date: 2016-12-05 14:50+0530\n"
+"PO-Revision-Date: 2016-12-05 14:56+0530\n"
 "Last-Translator: \n"
 "Language-Team: d\n"
 "Language: hi\n"
@@ -18,127 +18,139 @@ msgstr ""
 msgid "Stop"
 msgstr "रुकें"
 
-#: experiment.js:27 experiment.js:126 view.js:320
+#: experiment.js:27 experiment.js:127 view.js:331
 msgid "Start"
 msgstr "प्रारंभ"
+
+#: experiment.js:130
+msgid "Information"
+msgstr "जानकारी"
+
+#: experiment.js:130 user_controller.js:13
+msgid "Add Methylene Blue!"
+msgstr "मेथिलीन ब्लू जोड़ना"
 
 #: user_controller.js:13
 msgid "Error"
 msgstr "एरर"
 
 #: user_controller.js:13
-msgid "Add Methylene Blue!"
-msgstr "मेथिलीन ब्लू जोड़ना"
-
-#: user_controller.js:13
 msgid "Okay"
 msgstr "अच्छा"
 
-#: view.js:193
+#: view.js:204
 msgid "help1"
 msgstr "'तैट्रेन्ट' लटकती का उपयोग कर तैट्रेन्ट का चयन करें।"
 
-#: view.js:193
+#: view.js:204
 msgid "help2"
 msgstr "स्लाइडर का उपयोग कर तैट्रेन्ट 'बूंदों की स्पीड' की गति को समायोजित करें।"
 
-#: view.js:193
+#: view.js:204
 msgid "help3"
-msgstr "सामान्य समायोजित करें और इसी स्लाइडर्स का उपयोग मात्रा।"
+msgstr "सामान्य और इसी स्लाइडर्स का उपयोग टाइट्रेट की मात्रा समायोजित करें।"
 
-#: view.js:193
+#: view.js:204
 msgid "help4"
 msgstr "'आरंभ' बटन पर क्लिक करें प्रयोग शुरू करने के लिए।"
 
-#: view.js:193
+#: view.js:204
 msgid "help5"
-msgstr "तैट्राटे समाधान नीला हो जाते हैं जब तक।"
+msgstr "टाइट्रेट जब तक नीले रंग सिर्फ फेड्स।"
 
-#: view.js:193
+#: view.js:204
 msgid "help6"
-msgstr "अंत बिंदु को ध्यान से देखें और मेथिलीन का उपयोग करते हुए 'मेथिलीन ब्लू' बटन जोड़ने।"
+msgstr "मेथिलीन नीले सूचक मेथिलीन नीले बटन का उपयोग कर जोड़ें।"
 
-#: view.js:193
+#: view.js:204
+msgid "help7"
+msgstr "अनुमापन का उपयोग कर एक लाल वेग तक 'आरंभ' बटन प्राप्त की है जारी रखें।"
+
+#: view.js:204
+msgid "help8"
+msgstr "अंत बिंदु को ध्यान से देखें।"
+
+#: view.js:204
 msgid "Next"
 msgstr "अगला"
 
-#: view.js:193
+#: view.js:204
 msgid "Close"
 msgstr "बंद करे"
 
-#: view.js:195
+#: view.js:206
 msgid "Organic Synthesis: Estimation Of Glucose"
 msgstr "कार्बनिक संश्लेषण: ग्लूकोज का आकलन"
 
-#: view.js:196
+#: view.js:207
 msgid "Variables"
 msgstr "चर"
 
-#: view.js:197
+#: view.js:208
 msgid "Titrant"
 msgstr "टाइट्रट "
 
-#: view.js:198 view.js:215
+#: view.js:209 view.js:228
 msgid "Water Melon"
 msgstr "तरबूज"
 
-#: view.js:199
+#: view.js:210
 msgid "Speed of drops"
 msgstr "टाइट्रट की गति"
 
-#: view.js:200
+#: view.js:211
 msgid "Titrate"
 msgstr "टाइट्रेट"
 
-#: view.js:201 view.js:225
+#: view.js:212
 msgid "Fehling's Solution"
 msgstr "फाहलिंग समाधान"
 
-#: view.js:202
+#: view.js:213
 msgid "Indicator :"
 msgstr "संकेतक:"
 
-#: view.js:203
+#: view.js:214
 msgid "Normality"
 msgstr "साधारण अवस्था"
 
-#: view.js:204
+#: view.js:216
 msgid "Volume"
 msgstr "आयतन"
 
-#: view.js:205
-msgid "Volume of Water"
-msgstr "पानी की मात्रा"
-
-#: view.js:207
-msgid "Methylene Blue"
-msgstr "मेथिलीन ब्लू"
-
-#: view.js:208
-msgid "Reset"
-msgstr "रीसेट"
-
-#: view.js:209
-msgid "Result"
-msgstr "परिणाम"
-
-#: view.js:210
-msgid "Titrant Used"
-msgstr "तैट्रेन्ट प्रयुक्त"
-
-#: view.js:211
+#: view.js:217 view.js:224
 msgid "ml"
 msgstr "मिलीलीटर"
 
-#: view.js:212
+#: view.js:218
+msgid "Volume of Water"
+msgstr "पानी की मात्रा"
+
+#: view.js:220
+msgid "Methylene Blue"
+msgstr "मेथिलीन ब्लू"
+
+#: view.js:221
+msgid "Reset"
+msgstr "रीसेट"
+
+#: view.js:222
+msgid "Result"
+msgstr "परिणाम"
+
+#: view.js:223
+msgid "Titrant Used"
+msgstr "तैट्रेन्ट प्रयुक्त"
+
+#: view.js:225
 msgid "copyright"
 msgstr "कॉपीराइट © अमृता विश्वविद्यालय 2015 - 2009"
 
-#: view.js:218
+#: view.js:231
 msgid "Tender Coconut"
 msgstr "कच्चा नारियल"
 
-#: view.js:221
+#: view.js:234
 msgid "Soft Drink"
 msgstr "शीतल पेय"
 
@@ -196,12 +208,6 @@ msgstr "शीतल पेय"
 
 #~ msgid "Castor oil"
 #~ msgstr "रेंड़ी का तेल"
-
-#~ msgid "help7"
-#~ msgstr "titrant की मात्रा ' फिर से भरना Burette ' बटन पर क्लिक करके शून्य फिर से भरना burette तक पहुँच जाता है ।"
-
-#~ msgid "help8"
-#~ msgstr "अनुमापन जारी रखें जब तक समाधान का रंग बेरंग हो जाता है।"
 
 #~ msgid "help9"
 #~ msgstr "अंत बिंदु को ध्यान से देखें ।"
@@ -449,17 +455,29 @@ msgstr "शीतल पेय"
 #~ msgid "EXIT"
 #~ msgstr "EXIT"
 
-#~ msgid "Developed by CDAC Mumbai & Amrita University <br> Under research grant from department of IT"
-#~ msgstr "Developed by CDAC Mumbai & Amrita University <br> Under research grant from department of IT"
+#~ msgid ""
+#~ "Developed by CDAC Mumbai & Amrita University <br> Under research grant from department "
+#~ "of IT"
+#~ msgstr ""
+#~ "Developed by CDAC Mumbai & Amrita University <br> Under research grant from department "
+#~ "of IT"
 
 #~ msgid "The mass of the object due to gravity that displayed in the spring balance"
 #~ msgstr "The mass of the object due to gravity that displayed in the spring balance"
 
-#~ msgid "The actual mass of the body calculated using the equation, m = gravitational mass(w) x 9.8 / g(environment)"
-#~ msgstr "The actual mass of the body calculated using the equation, m = gravitational mass(w) x 9.8 / g(environment)"
+#~ msgid ""
+#~ "The actual mass of the body calculated using the equation, m = gravitational mass(w) x "
+#~ "9.8 / g(environment)"
+#~ msgstr ""
+#~ "The actual mass of the body calculated using the equation, m = gravitational mass(w) x "
+#~ "9.8 / g(environment)"
 
-#~ msgid "Final level of water (with block immersed) - Initial level of water (without block immersed)"
-#~ msgstr "Final level of water (with block immersed) - Initial level of water (without block immersed)"
+#~ msgid ""
+#~ "Final level of water (with block immersed) - Initial level of water (without block "
+#~ "immersed)"
+#~ msgstr ""
+#~ "Final level of water (with block immersed) - Initial level of water (without block "
+#~ "immersed)"
 
 #~ msgid "Density, D(g/cc) = m/v = mass divided by volume"
 #~ msgstr "Density, D(g/cc) = m/v = mass divided by volume"
@@ -544,17 +562,27 @@ msgstr "शीतल पेय"
 #~ msgstr "Number of grasshoppers : "
 
 #, fuzzy
-#~ msgid "Presence of CO<sub>2</sub> in the test tube, turns the blue BTB indicator to green."
-#~ msgstr "Presence of CO<sub>2</sub> in the test tube, turns the blue BTB indicator to green."
+#~ msgid ""
+#~ "Presence of CO<sub>2</sub> in the test tube, turns the blue BTB indicator to green."
+#~ msgstr ""
+#~ "Presence of CO<sub>2</sub> in the test tube, turns the blue BTB indicator to green."
 
 #, fuzzy
 #~ msgid "Presence of CO<sub>2</sub> in the test tube, turns limewater milky."
 #~ msgstr "Presence of CO<sub>2</sub> in the test tube, turns limewater milky."
 
 #, fuzzy
-#~ msgid "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in the conical flask during the respiration of the grasshoppers."
-#~ msgstr "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in the conical flask during the respiration of the grasshoppers."
+#~ msgid ""
+#~ "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in "
+#~ "the conical flask during the respiration of the grasshoppers."
+#~ msgstr ""
+#~ "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in "
+#~ "the conical flask during the respiration of the grasshoppers."
 
 #, fuzzy
-#~ msgid "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in the conical flask during the respiration of the seeds."
-#~ msgstr "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in the conical flask during the respiration of the seeds."
+#~ msgid ""
+#~ "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in "
+#~ "the conical flask during the respiration of the seeds."
+#~ msgstr ""
+#~ "Level of water in the delivery tube rises up due to the release of CO<sub>2</sub> in "
+#~ "the conical flask during the respiration of the seeds."

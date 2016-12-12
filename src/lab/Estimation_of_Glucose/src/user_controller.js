@@ -10,7 +10,7 @@
         dialogsProvider.useEscClose(false);
         dialogsProvider.useCopy(false);
         dialogsProvider.setSize('sm');
-        $translateProvider.translations(language,{DIALOGS_ERROR:(_("Error")),DIALOGS_ERROR_MSG:(_("Add Methylene Blue!")),DIALOGS_CLOSE:(_("Okay"))}),$translateProvider.preferredLanguage(language);
+        $translateProvider.translations(language,{DIALOGS_ERROR:(_("Error")),DIALOGS_ERROR_MSG:(_("Add Methylene Blue!")),DIALOGS_CLOSE:(_("Okay")),DIALOGS_OK:(_("Okay"))}),$translateProvider.preferredLanguage(language);
     }]);
      /**
      * Main Controller for the Angular Material Starter App
@@ -20,6 +20,7 @@
      * @constructor
      */
     function UserController($mdSidenav, $mdBottomSheet, $log, $q, $scope, $element, Fullscreen, $mdToast, $animate, $translate, dialogs) {
+        dialogs_temp = dialogs; /** For using dialogs globaly, assign the object to a variable */
         $scope.toastPosition = {
             bottom: true,
             top: false,
@@ -41,42 +42,56 @@
         $scope.showActionToast = function() {
             var toast = $mdToast.simple()
                 .content(help_array[0])
-                .action(help_array[6])
+                .action(help_array[8])
                 .hideDelay(15000)
                 .highlightAction(false)
                 .position($scope.getToastPosition());
 
             var toast1 = $mdToast.simple()
                 .content(help_array[1])
-                .action(help_array[6])
+                .action(help_array[8])
                 .hideDelay(15000)
                 .highlightAction(false)
                 .position($scope.getToastPosition());
 
             var toast2 = $mdToast.simple()
                 .content(help_array[2])
-                .action(help_array[6])
+                .action(help_array[8])
                 .hideDelay(15000)
                 .highlightAction(false)
                 .position($scope.getToastPosition());
 
             var toast3 = $mdToast.simple()
                 .content(help_array[3])
-                .action(help_array[6])
+                .action(help_array[8])
                 .hideDelay(15000)
                 .highlightAction(false)
                 .position($scope.getToastPosition());
 
             var toast4 = $mdToast.simple()
                 .content(help_array[4])
-                .action(help_array[6])
+                .action(help_array[8])
                 .hideDelay(15000)
                 .highlightAction(false)
                 .position($scope.getToastPosition());
 
             var toast5 = $mdToast.simple()
                 .content(help_array[5])
-                .action(help_array[7])
+                .action(help_array[8])
+                .hideDelay(15000)
+                .highlightAction(false)
+                .position($scope.getToastPosition());
+
+            var toast6 = $mdToast.simple()
+                .content(help_array[6])
+                .action(help_array[8])
+                .hideDelay(15000)
+                .highlightAction(false)
+                .position($scope.getToastPosition());
+
+            var toast7 = $mdToast.simple()
+                .content(help_array[7])
+                .action(help_array[9])
                 .hideDelay(15000)
                 .highlightAction(false)
                 .position($scope.getToastPosition());
@@ -87,7 +102,11 @@
                         $mdToast.show(toast3).then(function() {
                             $mdToast.show(toast4).then(function() {
                                 $mdToast.show(toast5).then(function() {
+                                    $mdToast.show(toast6).then(function() {
+                                        $mdToast.show(toast7).then(function() {
 
+                                        });
+                                    });
                                 });
                             });
                         });

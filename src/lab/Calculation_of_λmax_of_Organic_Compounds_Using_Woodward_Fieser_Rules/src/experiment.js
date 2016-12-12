@@ -7,36 +7,36 @@
 
 /**calculation based on the tab selected*/
 function calculation(scope,dialogs){	
-	if(scope.selectedIndex==1){/** if conjugate*/
+	if(scope.selectedIndex == 1){/** if conjugate*/
 		calculateConjugate(scope,dialogs);
 	}
-	else if(scope.selectedIndex==2){/** if ketones*/
+	else if(scope.selectedIndex == 2){/** if ketones*/
 		calculateKetone(scope,dialogs);
 	}
-	else if(scope.selectedIndex==3){/** if aromatic*/
+	else if(scope.selectedIndex == 3){/** if aromatic*/
 	calculateAromatic(scope,dialogs);	
 	}	
 }
 /**Calculate the lambda max of conjugate compounds*/
 function calculateConjugate(scope,dialogs){
 	getChild();
-	base_val_txt=base_val.value;
-	ring_val_txt=ring_val.value;
-	exocyclic_val_txt=exocyclic_val.value;
-	dbl_bond_val_txt=dbl_bond_val.value;
-	polar_val_txt=polar_val.value;	
+	base_val_txt = Number(base_val.value);
+	ring_val_txt = Number(ring_val.value);
+	exocyclic_val_txt = Number(exocyclic_val.value);
+	dbl_bond_val_txt = Number(dbl_bond_val.value);
+	polar_val_txt = Number(polar_val.value);	
 	/**set the value of empty textbox with 0 in conjugate compounds*/
-	polar_val_txt==""?polar_val_txt=0:polar_val_txt=polar_val_txt;
-	dbl_bond_val_txt==""?dbl_bond_val_txt=0:dbl_bond_val_txt=dbl_bond_val_txt;
-	exocyclic_val_txt==""?exocyclic_val_txt=0:exocyclic_val_txt=exocyclic_val_txt;
+	polar_val_txt == ""?polar_val_txt = 0:polar_val_txt = polar_val_txt;
+	dbl_bond_val_txt == ""?dbl_bond_val_txt = 0:dbl_bond_val_txt = dbl_bond_val_txt;
+	exocyclic_val_txt == ""?exocyclic_val_txt = 0:exocyclic_val_txt = exocyclic_val_txt;
 	/**validate the textbox value with the values of the conjugate from the xml*/
 	errorValidationConjugate();	
-	if(lambda_max==document.getElementById("maxLambdaText").value){
-		if(base_val_txt == base_value && dbl_bond_val_txt==double_bond && exocyclic_val_txt==exocyclic_doubleBond && polar_groups == polar_val_txt && ring_val_txt == substituent_residue){
-			document.getElementById("checkSpan").style.display="inline-flex"
+	if(lambda_max == document.getElementById("maxLambdaText").value){
+		if(base_val_txt == base_value && dbl_bond_val_txt == double_bond && exocyclic_val_txt == exocyclic_doubleBond && polar_groups == polar_val_txt && ring_val_txt == substituent_residue){
+			document.getElementById("checkSpan").style.display = "inline-flex"
 		}
 		else{
-			document.getElementById("checkSpan").style.display="none"
+			document.getElementById("checkSpan").style.display = "none"
 			dialogs.error(_("Error"),_("Enter correct values"),_("Close"));
 		}	
 	}
@@ -48,31 +48,31 @@ function calculateConjugate(scope,dialogs){
 /**Calculate the lambda max of ketone compounds*/
 function calculateKetone(scope,dialogs){
 	getChildKetone();// get child object of textbox
-	base_val_ket_txt=base_val_ketone.value;
-	ring_keto_a_txt=ring_keto_a.value;
-	ring_keto_b_txt=ring_keto_b.value;
-	ring_keto_c_txt=ring_keto_c.value;
-	ring_keto_d_txt=ring_keto_d.value;
-	polar_keto_a_txt=polar_keto_a.value;
-	polar_keto_b_txt=polar_keto_b.value;
-	polar_keto_c_txt=polar_keto_c.value;
-	polar_keto_d_txt=polar_keto_d.value;
-	keto_dbl_bnd_txt=keto_dbl_bnd.value;
-	ket_homodien_cmd_txt=ket_homodien_cmd.value;
-	ket_exo_cyclic_txt=ket_exo_cyclic.value;
+	base_val_ket_txt = Number(base_val_ketone.value);
+	ring_keto_a_txt = Number(ring_keto_a.value);
+	ring_keto_b_txt = Number(ring_keto_b.value);
+	ring_keto_c_txt = Number(ring_keto_c.value);
+	ring_keto_d_txt = Number(ring_keto_d.value);
+	polar_keto_a_txt = Number(polar_keto_a.value);
+	polar_keto_b_txt = Number(polar_keto_b.value);
+	polar_keto_c_txt = Number(polar_keto_c.value);
+	polar_keto_d_txt = Number(polar_keto_d.value);
+	keto_dbl_bnd_txt = Number(keto_dbl_bnd.value);
+	ket_homodien_cmd_txt = Number(ket_homodien_cmd.value);
+	ket_exo_cyclic_txt = Number(ket_exo_cyclic.value);
 	
 	/**set the value of empty textbox with 0 in ketone compounds*/
-	ring_keto_a_txt==""?ring_keto_a_txt=0:ring_keto_a_txt=ring_keto_a_txt;
-	ring_keto_b_txt==""?ring_keto_b_txt=0:ring_keto_b_txt=ring_keto_b_txt;
-	ring_keto_c_txt==""?ring_keto_c_txt=0:ring_keto_c_txt=ring_keto_c_txt;
-	ring_keto_d_txt==""?ring_keto_d_txt=0:ring_keto_d_txt=ring_keto_d_txt;
-	polar_keto_a_txt==""?polar_keto_a_txt=0:polar_keto_a_txt=polar_keto_a_txt;
-	polar_keto_b_txt==""?polar_keto_b_txt=0:polar_keto_b_txt=polar_keto_b_txt;
-	polar_keto_c_txt==""?polar_keto_c_txt=0:polar_keto_c_txt=polar_keto_c_txt;
-	polar_keto_d_txt==""?polar_keto_d_txt=0:polar_keto_d_txt=polar_keto_d_txt;
-	keto_dbl_bnd_txt==""?keto_dbl_bnd_txt=0:keto_dbl_bnd_txt=keto_dbl_bnd_txt;
-	ket_homodien_cmd_txt==""?ket_homodien_cmd_txt=0:ket_homodien_cmd_txt=ket_homodien_cmd_txt;
-	ket_exo_cyclic_txt==""?ket_exo_cyclic_txt=0:ket_exo_cyclic_txt=ket_exo_cyclic_txt;	
+	ring_keto_a_txt == ""?ring_keto_a_txt = 0:ring_keto_a_txt = ring_keto_a_txt;
+	ring_keto_b_txt == ""?ring_keto_b_txt = 0:ring_keto_b_txt = ring_keto_b_txt;
+	ring_keto_c_txt == ""?ring_keto_c_txt = 0:ring_keto_c_txt = ring_keto_c_txt;
+	ring_keto_d_txt == ""?ring_keto_d_txt = 0:ring_keto_d_txt = ring_keto_d_txt;
+	polar_keto_a_txt == ""?polar_keto_a_txt = 0:polar_keto_a_txt = polar_keto_a_txt;
+	polar_keto_b_txt == ""?polar_keto_b_txt = 0:polar_keto_b_txt = polar_keto_b_txt;
+	polar_keto_c_txt == ""?polar_keto_c_txt = 0:polar_keto_c_txt = polar_keto_c_txt;
+	polar_keto_d_txt == ""?polar_keto_d_txt = 0:polar_keto_d_txt = polar_keto_d_txt;
+	keto_dbl_bnd_txt == ""?keto_dbl_bnd_txt = 0:keto_dbl_bnd_txt = keto_dbl_bnd_txt;
+	ket_homodien_cmd_txt ==""?ket_homodien_cmd_txt=0:ket_homodien_cmd_txt = ket_homodien_cmd_txt;
+	ket_exo_cyclic_txt ==""?ket_exo_cyclic_txt = 0:ket_exo_cyclic_txt = ket_exo_cyclic_txt;	
 	
 	/**validate the textbox value with the values of the ketones from the xml*/
 	errorValidationKetone();
@@ -82,7 +82,7 @@ function calculateKetone(scope,dialogs){
 		if(base_val_ket_txt == ketone_base && ring_keto_a_txt==ring_alpha && ring_keto_b_txt==ring_beta && ring_keto_c_txt == ring_gamma
 		&& ring_keto_d_txt == ring_delta && polar_keto_a_txt == polar_alpha && polar_keto_b_txt == polar_beta && polar_keto_c_txt == polar_gamma 
 		&& polar_keto_d_txt == polar_delta && keto_dbl_bnd_txt == keto_dblbond && ket_homodien_cmd_txt == homodiene_cmd && ket_exo_cyclic_txt == exocyclic_bnd){
-			document.getElementById("checkSpan").style.display="inline-flex"
+			document.getElementById("checkSpan").style.display = "inline-flex"
 		}
 		else{
 			document.getElementById("checkSpan").style.display="none"
@@ -97,32 +97,32 @@ function calculateKetone(scope,dialogs){
 /**Calculate the lambda max of the aromatic compounds*/
 function calculateAromatic(scope,dialogs){
 	getChildAromatic();//get the object of the textbox
-	base_val_arom_txt=base_val_aromatic.value;
-	ring_arom_ortho_txt=ring_aromatic_ortho.value;
-	ring_arom_para_txt=ring_aromatic_para.value;
-	ring_arom_meta_txt=ring_aromatic_meta.value;	
-	polar_arom_ortho_txt=polar_aromatic_ortho.value;
-	polar_arom_para_txt=polar_aromatic_para.value;
-	polar_arom_meta_txt=polar_aromatic_meta.value;
+	base_val_arom_txt = Number(base_val_aromatic.value);
+	ring_arom_ortho_txt = Number(ring_aromatic_ortho.value);
+	ring_arom_para_txt = Number(ring_aromatic_para.value);
+	ring_arom_meta_txt = Number(ring_aromatic_meta.value);	
+	polar_arom_ortho_txt = Number(polar_aromatic_ortho.value);
+	polar_arom_para_txt = Number(polar_aromatic_para.value);
+	polar_arom_meta_txt = Number(polar_aromatic_meta.value);
 	
 	/**set the value of empty textbox with 0 in aromatic compounds*/
-	base_val_arom_txt==""?base_val_arom_txt=0:base_val_arom_txt=base_val_arom_txt;
-	ring_arom_ortho_txt==""?ring_arom_ortho_txt=0:ring_arom_ortho_txt=ring_arom_ortho_txt;
-	ring_arom_para_txt==""?ring_arom_para_txt=0:ring_arom_para_txt=ring_arom_para_txt;
-	ring_arom_meta_txt==""?ring_arom_meta_txt=0:ring_arom_meta_txt=ring_arom_meta_txt;
-	polar_arom_ortho_txt==""?polar_arom_ortho_txt=0:polar_arom_ortho_txt=polar_arom_ortho_txt;
-	polar_arom_para_txt==""?polar_arom_para_txt=0:polar_arom_para_txt=polar_arom_para_txt;
-	polar_arom_meta_txt==""?polar_arom_meta_txt=0:polar_arom_meta_txt=polar_arom_meta_txt;
+	base_val_arom_txt == ""?base_val_arom_txt = 0:base_val_arom_txt = base_val_arom_txt;
+	ring_arom_ortho_txt == ""?ring_arom_ortho_txt = 0:ring_arom_ortho_txt = ring_arom_ortho_txt;
+	ring_arom_para_txt == ""?ring_arom_para_txt = 0:ring_arom_para_txt = ring_arom_para_txt;
+	ring_arom_meta_txt == ""?ring_arom_meta_txt = 0:ring_arom_meta_txt = ring_arom_meta_txt;
+	polar_arom_ortho_txt == ""?polar_arom_ortho_txt = 0:polar_arom_ortho_txt = polar_arom_ortho_txt;
+	polar_arom_para_txt == ""?polar_arom_para_txt = 0:polar_arom_para_txt = polar_arom_para_txt;
+	polar_arom_meta_txt == ""?polar_arom_meta_txt = 0:polar_arom_meta_txt = polar_arom_meta_txt;
 	
 	/**validate the textbox value with the values of the aromatic from the xml*/
 	errorValidationAromatic();	
 	/**check the lambda max value entered by the user match with the value in the xml*/
-	if(lambda_max==document.getElementById("maxLambdaText").value){
-	if(base_val_arom_txt == aromatic_base && ring_arom_ortho_txt==aromatic_ring_ortho && ring_arom_para_txt==aromatic_ring_para && ring_arom_meta_txt == aromatic_ring_meta&& polar_arom_ortho_txt == aromatic_polar_ortho && polar_arom_para_txt == aromatic_polar_para && polar_arom_meta_txt == aromatic_polar_meta){
+	if(lambda_max == document.getElementById("maxLambdaText").value){
+	if(base_val_arom_txt == aromatic_base && ring_arom_ortho_txt == aromatic_ring_ortho && ring_arom_para_txt == aromatic_ring_para && ring_arom_meta_txt == aromatic_ring_meta&& polar_arom_ortho_txt == aromatic_polar_ortho && polar_arom_para_txt == aromatic_polar_para && polar_arom_meta_txt == aromatic_polar_meta){
 		document.getElementById("checkSpan").style.display="inline-flex";/**display 'right' mark*/
 		}
 		else{
-		document.getElementById("checkSpan").style.display="none"
+		document.getElementById("checkSpan").style.display = "none"
 		dialogs.error(_("Error"),_("Enter correct values"),_("Close"));
 		}	
 	}
@@ -147,8 +147,7 @@ function loadXml()
 		
 /**Read the values of base value, ring residue, polar position, double bond etc of each compound from the xml*/		
 function readXML(xml)
-{	
-    /**Read the values of thegiven compounds from the xml*/
+{	/**Read the values of thegiven compounds from the xml*/
 	var xmlDoc = xml.responseXML;	
 	compound2 = xmlDoc.getElementsByTagName("compounds");
 	var id= compound2[0].getElementsByTagName("orgCompound")[0].getAttribute("id");		

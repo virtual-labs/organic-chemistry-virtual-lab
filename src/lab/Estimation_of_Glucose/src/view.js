@@ -13,9 +13,9 @@ var start_flag, volume_int, turner_count, solution_vol, speed_var, titrant_sol, 
 
 var final_titration_point, titrant_volume, burette_soln_incr, flask_soln_incr, titrant_incr, dalay_max, drop_y, drop_speed_var;
 
-var flame_anim_frame, flame_anim_width, flame_anim_timer;
+var flame_anim_frame, flame_anim_width, flame_anim_timer, dialogs_temp;
 
-var titrate_array = help_array = titrate_array = solution_item_array = titrant_array = titrant_value_array = [];
+var help_array = solution_item_array = titrant_array = titrant_value_array = [];
 
 var mask_flask_rect = new createjs.Shape();
 
@@ -192,16 +192,27 @@ function directiveFunction() {
                 translationLabels();
                 /** Calling function for making the water movement */
                 waterMovement();
+                /** Function for making turner off and on */
+                turner_rect.on("click", function() {
+                    /** Making turner on */
+                    if ( !turner_start_flag ) {
+                        turner_start_flag = true;
+                    } else { /** Making turner off */
+                        turner_start_flag = false;
+                    }
+                    startExperiment(scope_temp);
+                    scope_temp.$apply();
+                });
                 /** Flame animation function in a atimer */
                 flame_anim_timer = setInterval(flameAnimation, 100);
                 glucose_estimation_stage.update();
             }
-            
+       
             /** Add all the strings used for the language translation here. '_' is the short cut for 
             calling the gettext function defined in the gettext-definition.js */
             function translationLabels() {
                 /** This help array shows the hints for this experiment */
-                help_array = [_("help1"), _("help2"), _("help3"), _("help4"), _("help5"), _("help6"), _("Next"), _("Close")];
+                help_array = [_("help1"), _("help2"), _("help3"), _("help4"), _("help5"), _("help6"), _("help7"), _("help8"), _("Next"), _("Close")];
                 /** Experiment name */
                 scope.heading = _("Organic Synthesis: Estimation Of Glucose");
                 scope.variables = _("Variables");   
@@ -212,7 +223,9 @@ function directiveFunction() {
                 scope.fehling_solution = _("Fehling's Solution");
                 scope.indicator_label = _("Indicator :");
                 scope.normality_label = _("Normality");
+                scope.normality_unit = ("N");
                 scope.volume_label = _("Volume");
+                scope.volume_unit = _("ml");
                 scope.water_vol_label = _("Volume of Water");
                 /** Labels for buttons */
                 scope.methylene_label = _("Methylene Blue");
@@ -221,7 +234,7 @@ function directiveFunction() {
                 scope.titrant_used_label = _("Titrant Used");
                 scope.titrant_unit = _("ml");
                 scope.copyright = _("copyright");
-                /** The titrant_array and titrate_array contains the values and indexes of the dropdown */
+                /** The titrant_array contains the values and indexes of the dropdown */
                 scope.titrant_array = [{ 
                     solution: _('Water Melon'),
                     type: 0
@@ -231,10 +244,6 @@ function directiveFunction() {
                 }, {
                     solution: _('Soft Drink'),
                     type: 2
-                }];
-                scope.titrate_array = [{
-                    selected_type: _("Fehling's Solution"),
-                    type: 0
                 }];
                 scope.$apply();
             }
@@ -290,8 +299,8 @@ function initialisationOfVariables(scope) {
     burette_soln_incr = 0.362; /** Used to calculate the level of solution in the burette */   
     flask_soln_incr = 0.05; /** Used to calculate the level of solution in the conical flask */   
     titrant_incr = 0.1; /** Used for calculating titrant used in the result area */   
-    final_titration_point = 49; /** Variable used to stop the whole titration process */   
-    drop_y = 510; /** Used to calculate y point of the drop */
+    final_titration_point = 50; /** Variable used to stop the whole titration process */   
+    drop_y = 500; /** Used to calculate y point of the drop */
     drop_speed_var = 0.1;
     flame_anim_width = 16.967;
     flame_anim_frame = 0;
@@ -300,7 +309,7 @@ function initialisationOfVariables(scope) {
     /** Array for storing solution type */
     solution_item_array = ["watermelon_solution", "coconut_solution", "soft_drink_solution"];
     /** Array for storing constant values of each solution */
-    titrant_value_array = [0.04950495, 0.044643, 0.111111];    
+    titrant_value_array = [0.04950495, 0.044643, 0.111111];
 }
 
 /** All images are initialising in this function */
@@ -335,11 +344,15 @@ function initialisationOfControls(scope) {
     scope.speed = 0.1; /** Initial value for speed of drops slider */    
     scope.normality = 0.01; /** Initial value for normality of titrate */    
     scope.volume = 10; /** Initial value for volume of titrate */
-    scope.water_vol = 10; /** Initial value for volume of water */  
-    scope.methylene_disable = true; /** It disables the methylene blue button */     
-    scope.titrant_used = 0; /** Initial value of titrant used in the result part */    
-    scope.titrate_disable = false; /** For enabling and disabling titrate dropdown*/       
-    scope.start_disable = false; /** For enabling and disabling start button */ 
+    scope.water_vol = 10; /** Initial value for volume of water */
+    scope.titrant_used = 0; /** Initial value of titrant used in the result part */
+    scope.titration_soln = 0; /** Initial value for solution in dropdown */
+    scope.methylene_disable = true; /** It disables the methylene blue button */        
+    scope.titrant_disable = false; /** For enabling and disabling titrant dropdown */
+    scope.speed_disable = false; /** For enabling and disabling spped of drops slider */ 
+    scope.normality_disable = false; /** For enabling and disabling normality slider */ 
+    scope.volume_disable = false; /** For enabling and disabling volume slider */ 
+    scope.start_disable = false; /** For enabling and disabling start button */    
 }
 
 /** Function for creating rectangle for masking burette and conical flask solution */

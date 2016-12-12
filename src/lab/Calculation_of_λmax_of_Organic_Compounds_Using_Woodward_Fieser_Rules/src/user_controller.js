@@ -31,6 +31,12 @@
 		left: true,
 		right: false
 	};
+			
+   $element.bind('keypress', function(event) { 
+            if(event.keyCode === 101 ||event.keyCode === 69 ||event.keyCode === 46 ) {
+              event.preventDefault();
+            }
+          });
 	$scope.toggleSidenav = function(ev) {
 		$mdSidenav('right').toggle();
 	};
@@ -102,18 +108,21 @@
   $scope.getSelectedIndexConjugate = function(){/**select conjugate tab*/
 	  $scope.selectedIndex=1;
 	  selectedIndex=1;
+	  randum_selected_img = 12;
 	  tab_label="conjugate";
 	  init($scope.selectedIndex);  
   }
   $scope.getSelectedIndexKetone = function(){/**select ketone tab*/
 	$scope.selectedIndex=2;
 	selectedIndex=2;
+	randum_selected_img = 11;
     tab_label="ketone";
 	init($scope.selectedIndex);
   }
   $scope.getSelectedIndexAromatic = function(){ /**select aromatic tab*/
 	$scope.selectedIndex=3;
 	selectedIndex=3;
+	randum_selected_img = 7;
     tab_label="aromatic";
 	init($scope.selectedIndex);
   }

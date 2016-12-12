@@ -25,7 +25,7 @@ var base_val_ket_txt,ring_keto_a_txt,ring_keto_b_txt,ring_keto_c_txt,ring_keto_d
 
 var polar_keto_b_txt,polar_keto_c_txt,polar_keto_d_txt,keto_dbl_bnd_txt,ket_homodien_cmd_txt,ket_exo_cyclic_txt,keto_dbl_bnd, ket_homodien_cmd;
 
-var base_val_ketone, ring_keto_a, ring_keto_b, ring_keto_c, ring_keto_d, polar_keto_a, polar_keto_b, polar_keto_c, polar_keto_d; 
+var base_val_ketone, ring_keto_a, ring_keto_b, ring_keto_c, ring_keto_d, polar_keto_a, polar_keto_b, polar_keto_c, polar_keto_d, randum_selected_img; 
 
 var aromatic_base, aromatic_ring_ortho, aromatic_ring_para, aromatic_ring_meta, aromatic_polar_ortho, aromatic_polar_para, aromatic_polar_meta;
 
@@ -33,6 +33,7 @@ var base_val_aromatic, ring_aromatic_ortho, ring_aromatic_para, ring_aromatic_me
 
 	function directiveFunction() {
 		return {
+		  require: '?ngModel',
 			restrict: "A",
 			link: function(scope, element, attrs, dialogs) {
 				/** Variable that decides if something should be drawn on mouse move */
@@ -105,7 +106,7 @@ function init(selectedIndex) {
 	document.getElementById("maxLambdaText").value="";
 	ran_num = getRandomNumber(selectedIndex);		
 	img = new Image();
-	img.src = '././images/'+tab_label+ran_num+'.svg';	
+	img.src = '././images/'+tab_label+ran_num+'.svg';
 	img.onload = handleImageLoad;
 }
 function handleImageLoad(event) {
@@ -123,15 +124,11 @@ function initialisationOfVariables(scope) {
 	selectedIndex=1;
 	border_style_black="1px solid black";
 	border_style_red="1px solid red";	
+	randum_selected_img = 12;
 	getChild();
 }
-function getRandomNumber(selectedIndex){
-	if(selectedIndex!=3){
-		return Math.floor((Math.random() * 12) + 1);		
-	}
-	else{
-		return Math.floor((Math.random() * 7) + 1);
-	}
+function getRandomNumber(selectedIndex){	
+	return Math.floor((Math.random() * randum_selected_img) + 1);		
 }
 function errorValidationAromatic(){	
 	validateTextBox(base_val_aromatic,base_val_arom_txt,aromatic_base);
