@@ -85,12 +85,12 @@ function makeGraph() {
 	chart = new CanvasJS.Chart("graphDiv", {
 		backgroundColor: "#490494",
 		type: "spline",
-		animationEnabled: false,
-		animationDuration: 1000,
+		animationEnabled: true,
+		animationDuration: 3000,
 		axisX: {
 			gridThickness: 1,
 			labelFontColor: "white",
-			minimum: 0,
+			minimum: 300,
 			maximum: 700,
 			interval: 50,
 			margin: 1,

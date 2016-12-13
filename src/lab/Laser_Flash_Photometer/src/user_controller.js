@@ -119,6 +119,7 @@
         }
         /** Function for reset experiment */
         $scope.resetExperiment = function(){
+            $mdToast.cancel();
             resetExperiment($scope); /** Function defined in experiment.js file */
         }
         
